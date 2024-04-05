@@ -11,7 +11,7 @@ function sumDigits(n) {
       return suma + sumDigits(n);
     }
   }
-
+// Ejemplos de euso
 console.log(sumDigits(12345)); // Resultado: 15
 console.log(sumDigits(987));   // Resultado: 24
 console.log(sumDigits(111));   // Resultado: 3
