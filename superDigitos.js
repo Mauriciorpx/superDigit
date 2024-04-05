@@ -1,17 +1,17 @@
-function sumDigits(n) {
+const superDigits = (numero) => {
     // Si n tiene un solo dígito, retornar n
-    if (n < 10) {
-      return n;
+    if (numero < 10) {
+      return numero;
     } else {
       // Sumar los dígitos de n
       let suma = 0;
-      suma += n % 10;
-      n = Math.floor(n / 10);
-      // Llamar recursivamente a sumDigits con la suma resultante
-      return suma + sumDigits(n);
+      suma += numero % 10;
+      numero = Math.floor(numero / 10);
+      // Se llama recursivamente a superDigits con la suma resultante
+      return suma + superDigits(numero);
     }
   }
 // Ejemplos de euso
-console.log(sumDigits(12345)); // Resultado: 15
-console.log(sumDigits(987));   // Resultado: 24
-console.log(sumDigits(111));   // Resultado: 3
+console.log(superDigits(12345)); // Resultado: 15
+console.log(superDigits(987));   // Resultado: 24
+console.log(superDigits(111));   // Resultado: 3
